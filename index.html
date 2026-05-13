@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Para Kamila 🌻</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#1a0d02;font-family:Georgia,serif;color:#fdf8ed;overflow-x:hidden}
+
+/* PETALS */
+.petal{position:fixed;top:-60px;border-radius:50% 50% 50% 50%/60% 60% 40% 40%;background:radial-gradient(ellipse at 50% 30%,#f9e05a,#e8a020 70%,#c8720a);opacity:0;animation:fall linear infinite;pointer-events:none;z-index:0}
+@keyframes fall{0%{transform:translateY(0) rotate(0deg);opacity:0}10%{opacity:.6}90%{opacity:.35}100%{transform:translateY(110vh) rotate(400deg);opacity:0}}
+
+/* HERO */
+.hero{position:relative;z-index:1;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:60px 24px 48px;background:radial-gradient(ellipse at 50% 0%,#6a3d05 0%,#1a0d02 65%)}
+.flower-wrap{animation:float 4s ease-in-out infinite;margin-bottom:32px}
+.flower-svg{animation:spin 18s linear infinite;display:block}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+.eyebrow{font-style:italic;font-size:1rem;color:#e8a020;letter-spacing:.14em;margin-bottom:14px;animation:fadeUp .9s ease both}
+.hero-title{font-size:clamp(2.8rem,9vw,5rem);font-weight:700;line-height:1.05;background:linear-gradient(135deg,#f9e05a,#f5c518,#c8920a);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:20px;animation:fadeUp 1.1s ease both}
+.hero-rule{width:80px;height:2px;background:#e8a020;margin:0 auto 22px;animation:fadeUp 1.3s ease both}
+.hero-desc{font-style:italic;color:#e8c97a;max-width:420px;line-height:1.85;font-size:1rem;animation:fadeUp 1.5s ease both}
+.scroll-hint{margin-top:48px;color:#e8a020;font-size:.85rem;letter-spacing:.1em;display:flex;flex-direction:column;align-items:center;gap:6px;animation:fadeUp 1.8s ease both}
+.arrow{font-size:1.4rem;animation:bounce 2s ease-in-out 3s infinite}
+@keyframes fadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(8px)}}
+
+/* SECTION */
+.section{position:relative;z-index:1;max-width:980px;margin:0 auto;padding:80px 20px}
+.sec-head{text-align:center;margin-bottom:52px}
+.sec-title{font-size:clamp(1.8rem,5vw,2.8rem);font-weight:700;background:linear-gradient(135deg,#f9e05a,#c8920a);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:12px}
+.divider{display:flex;align-items:center;justify-content:center;gap:14px;margin-bottom:14px}
+.divider-line{width:60px;height:1px;background:#e8a020;display:block}
+.sec-sub{font-style:italic;color:#c8a96a;font-size:.98rem}
+
+/* GRID */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:20px}
+.card{background:linear-gradient(145deg,#3a1e08,#261205);border:1px solid #5a3510;border-radius:16px;padding:24px 20px;position:relative;overflow:hidden;opacity:0;transform:translateY(24px);transition:opacity .5s ease,transform .5s ease,border-color .3s,box-shadow .3s}
+.card.show{opacity:1;transform:translateY(0)}
+.card:hover{border-color:#e8a020;box-shadow:0 18px 40px #00000055,0 0 24px #f5c51818}
+.card-num{font-size:2.2rem;font-weight:700;color:#f5c51815;line-height:1;margin-bottom:4px;user-select:none}
+.card-icon{font-size:1.4rem;margin-bottom:8px;display:block}
+.card-text{font-size:.93rem;line-height:1.75;color:#f0d99a}
+.card-bg{position:absolute;bottom:-8px;right:-4px;font-size:1.8rem;opacity:.07;transform:rotate(-20deg);user-select:none}
+
+/* CLOSING */
+.closing{position:relative;z-index:1;text-align:center;padding:70px 24px 100px;background:radial-gradient(ellipse at 50% 100%,#6a3d05 0%,#1a0d02 60%)}
+.closing-flower{font-size:3.5rem;margin-bottom:20px;display:block;animation:float 3.5s ease-in-out infinite}
+.closing-title{font-size:clamp(1.6rem,5vw,2.6rem);font-weight:700;background:linear-gradient(135deg,#f9e05a,#c8920a);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:20px}
+.closing-text{font-style:italic;color:#c8a96a;max-width:480px;margin:0 auto;line-height:1.9;font-size:1rem}
+.closing-sig{margin-top:40px;font-size:1.4rem;color:#f5c518;font-style:italic}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="flower-wrap">
+    <svg class="flower-svg" width="160" height="160" viewBox="0 0 200 200">
+      <g transform="translate(100,100)">
+        <ellipse cx="0" cy="-62" rx="13" ry="27" fill="#f5c518"/>
+        <ellipse cx="0" cy="-62" rx="13" ry="27" fill="#e8a020" transform="rotate(22.5)"/>
+        <ellipse cx="0" cy="-62" rx="13" ry="27" fill="#f5c518" transform="rotate(45)"/>
+        <ellipse cx="0" cy="-62" rx="13" ry="27" fill="#e8a020" transform="rotate(67.5)"/>
+        <ellipse cx="0" cy="-62" rx="13" ry="27" fill="#f5c518" transform="rotate(90)"/>
+        <ellipse cx="0" cy="-62" rx="13" ry="27" fill="#e8a020" transform="rotate(112.5)"/>
+        <ellipse cx="0" cy="-62" rx="13" ry="27" fill="#f5c518" transform="rotate(135)"/>
+        <ellipse cx="0" cy="-62" rx="13" ry="27" fill="#e8a020" transform="rotate(157.5)"/>
+        <ellipse cx="0" cy="-62" rx="13" ry="27" fill="#f5c518" transform="rotate(180)"/>
+        <ellipse cx="0" cy="-62" rx="13" ry="27" fill="#e8a020" transform="rotate(202.5)"/>
+        <ellipse cx="0" cy="-62" rx="13" ry="27" fill="#f5c518" transform="rotate(225)"/>
+        <ellipse cx="0" cy="-62" rx="13" ry="27" fill="#e8a020" transform="rotate(247.5)"/>
+        <ellipse cx="0" cy="-62" rx="13" ry="27" fill="#f5c518" transform="rotate(270)"/>
+        <ellipse cx="0" cy="-62" rx="13" ry="27" fill="#e8a020" transform="rotate(292.5)"/>
+        <ellipse cx="0" cy="-62" rx="13" ry="27" fill="#f5c518" transform="rotate(315)"/>
+        <ellipse cx="0" cy="-62" rx="13" ry="27" fill="#e8a020" transform="rotate(337.5)"/>
+        <circle r="34" fill="#5c3210"/>
+        <circle r="28" fill="#3d1f08"/>
+        <circle cx="0"   cy="-14" r="3" fill="#8a5a20"/>
+        <circle cx="10"  cy="-10" r="3" fill="#8a5a20"/>
+        <circle cx="14"  cy="0"   r="3" fill="#8a5a20"/>
+        <circle cx="10"  cy="10"  r="3" fill="#8a5a20"/>
+        <circle cx="0"   cy="14"  r="3" fill="#8a5a20"/>
+        <circle cx="-10" cy="10"  r="3" fill="#8a5a20"/>
+        <circle cx="-14" cy="0"   r="3" fill="#8a5a20"/>
+        <circle cx="-10" cy="-10" r="3" fill="#8a5a20"/>
+        <circle cx="0"   cy="0"   r="4" fill="#8a5a20"/>
+      </g>
+    </svg>
+  </div>
+  <p class="eyebrow">✦ Un mensaje desde el corazón ✦</p>
+  <h1 class="hero-title">Para Kamila</h1>
+  <div class="hero-rule"></div>
+  <p class="hero-desc">50 razones por las que eres la persona más especial de mi vida. Cada una es real. Cada una eres tú.</p>
+  <div class="scroll-hint">
+    <span>Desliza para descubrir</span>
+    <span class="arrow">↓</span>
+  </div>
+</section>
+
+<!-- REASONS -->
+<div class="section">
+  <div class="sec-head">
+    <h2 class="sec-title">50 Razones para Amarte</h2>
+    <div class="divider">
+      <span class="divider-line"></span>
+      <span>🌻</span>
+      <span class="divider-line"></span>
+    </div>
+    <p class="sec-sub">Porque las palabras son el único lugar donde cabe todo lo que siento.</p>
+  </div>
+  <div class="grid" id="grid"></div>
+</div>
+
+<!-- CLOSING -->
+<section class="closing">
+  <span class="closing-flower">🌻</span>
+  <h2 class="closing-title">Y esto es solo el principio…</h2>
+  <p class="closing-text">Cada día que pasa encuentro nuevas razones para amarte, Kamila.<br>Gracias por ser exactamente quien eres.</p>
+  <p class="closing-sig">Con todo mi amor, siempre. 💛</p>
+</section>
+
+<script>
+var reasons=[
+  {icon:"🌻",text:"Porque tu pasión por la cocina convierte cada plato en una obra de arte."},
+  {icon:"😄",text:"Porque tu risa es el sonido más bonito que conozco."},
+  {icon:"💪",text:"Porque eres increíblemente fuerte, incluso cuando crees que no puedes más."},
+  {icon:"🫂",text:"Porque cuando me abrazas siento que el mundo se queda quieto."},
+  {icon:"✨",text:"Porque tu forma de ver la vida tiene una magia que nadie más tiene."},
+  {icon:"🌙",text:"Porque incluso en tus días difíciles sigues siendo mi luz favorita."},
+  {icon:"🎨",text:"Porque tienes una creatividad que me asombra cada vez que la veo."},
+  {icon:"💬",text:"Porque puedo hablar contigo de todo y siempre me siento escuchado."},
+  {icon:"🌱",text:"Porque me haces querer crecer y ser mejor persona cada día."},
+  {icon:"🦋",text:"Porque la forma en que te apasionas por lo que amas es preciosa."},
+  {icon:"☕",text:"Porque los momentos simples contigo se convierten en los más especiales."},
+  {icon:"🌟",text:"Porque tienes una inteligencia que me enamora más con cada conversación."},
+  {icon:"🤝",text:"Porque estás ahí para mí sin que tenga que pedirlo."},
+  {icon:"🌊",text:"Porque tu calma me tranquiliza cuando yo no puedo encontrarla."},
+  {icon:"🎶",text:"Porque hay canciones que ya no puedo escuchar sin pensar en ti."},
+  {icon:"💡",text:"Porque tu manera de resolver problemas me deja sin palabras."},
+  {icon:"🌈",text:"Porque haces que los días grises tengan color."},
+  {icon:"🧡",text:"Porque amas con una profundidad que pocas personas conocen."},
+  {icon:"🔥",text:"Porque la determinación con la que persigues tus sueños me inspira."},
+  {icon:"🌸",text:"Porque eres delicada y fuerte al mismo tiempo, y eso es extraordinario."},
+  {icon:"🎯",text:"Porque cuando te propones algo, nada ni nadie te detiene."},
+  {icon:"🐝",text:"Porque tu energía llena cualquier lugar donde estés."},
+  {icon:"💎",text:"Porque tienes un valor que a veces tú misma no ves, pero yo siempre veo."},
+  {icon:"🌻",text:"Porque eres como los girasoles: siempre buscas la luz, pase lo que pase."},
+  {icon:"🫶",text:"Porque cuidas a las personas que amas con una entrega que me conmueve."},
+  {icon:"🏔️",text:"Porque a tu lado siento que puedo con cualquier montaña."},
+  {icon:"😂",text:"Porque me haces reír de una manera que nadie más logra."},
+  {icon:"🍽️",text:"Porque ver tu cara cuando alguien disfruta tu comida me hace feliz."},
+  {icon:"🌠",text:"Porque sueñas en grande y eso me contagia cada día."},
+  {icon:"🧩",text:"Porque encajas perfectamente en mi vida como si siempre hubieras estado."},
+  {icon:"💌",text:"Porque los pequeños detalles que tienes conmigo significan el mundo."},
+  {icon:"🌿",text:"Porque contigo todo se siente más natural, más real, más bonito."},
+  {icon:"👀",text:"Porque la forma en que me miras me hace sentir el más afortunado."},
+  {icon:"🕯️",text:"Porque incluso en la oscuridad tú eres la vela que ilumina todo."},
+  {icon:"🎁",text:"Porque tú sola eres el mejor regalo que la vida me ha dado."},
+  {icon:"🦁",text:"Porque tienes un coraje silencioso que muy pocos notan pero yo admiro."},
+  {icon:"🌺",text:"Porque florezco yo también cuando estoy cerca de ti."},
+  {icon:"🤫",text:"Porque guardas mis secretos y mis sueños con el mismo cuidado."},
+  {icon:"⚡",text:"Porque tu presencia transforma cualquier lugar en uno especial."},
+  {icon:"🎀",text:"Porque te mereces todo lo bonito que existe en este mundo."},
+  {icon:"🏠",text:"Porque eres mi hogar, independientemente de dónde estemos."},
+  {icon:"💫",text:"Porque me haces creer en las cosas buenas cuando olvido que existen."},
+  {icon:"🧠",text:"Porque tu mente me fascina y nunca deja de sorprenderme."},
+  {icon:"🐚",text:"Porque hay capas en ti que sigo descubriendo y cada una me enamora más."},
+  {icon:"🕊️",text:"Porque traes paz a mi vida de una forma que no sabía que necesitaba."},
+  {icon:"🌍",text:"Porque contigo el mundo es un lugar infinitamente mejor."},
+  {icon:"🫀",text:"Porque me enseñaste lo que significa amar de verdad."},
+  {icon:"🌻",text:"Porque cada girasol que veo ahora te pertenece a ti en mi corazón."},
+  {icon:"🌙",text:"Porque incluso dormida eres la cosa más hermosa que he visto."},
+  {icon:"♾️",text:"Porque el día que llegaste a mi vida cambió para siempre… y eso es lo más bonito de todo."}
+];
+
+// Build petals
+for(var i=0;i<20;i++){
+  var p=document.createElement('div');
+  p.className='petal';
+  var w=12+Math.random()*12;
+  p.style.left=Math.random()*100+'vw';
+  p.style.width=w+'px';
+  p.style.height=(w*2)+'px';
+  p.style.animationDuration=(9+Math.random()*12)+'s';
+  p.style.animationDelay=(Math.random()*16)+'s';
+  document.body.appendChild(p);
+}
+
+// Build cards
+var grid=document.getElementById('grid');
+reasons.forEach(function(r,i){
+  var card=document.createElement('div');
+  card.className='card';
+  card.innerHTML='<div class="card-num">'+String(i+1).padStart(2,'0')+'</div><span class="card-icon">'+r.icon+'</span><p class="card-text">'+r.text+'</p><span class="card-bg">🌻</span>';
+  card.style.transitionDelay=(i*0.05)+'s';
+  grid.appendChild(card);
+});
+
+// Reveal on scroll
+var observer=new IntersectionObserver(function(entries){
+  entries.forEach(function(e){
+    if(e.isIntersecting){e.target.classList.add('show');observer.unobserve(e.target);}
+  });
+},{threshold:0.08});
+document.querySelectorAll('.card').forEach(function(c){observer.observe(c);});
+</script>
+</body>
+</html>
